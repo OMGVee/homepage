@@ -1,0 +1,249 @@
+<style type="text/css" media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+      }
+
+      body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: 100%;
+        #background-color: #f9f9f9;
+        background-color: #373373;
+        background-image: url('https://source.unsplash.com/random');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: #404648;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1;
+        margin: 0px;
+      }
+
+      a {
+        color: #5a8fef;
+        text-decoration: none;
+        transition: color 200ms linear;
+      }
+
+      a:visited {
+        #color: #6a7072;
+        color: #5180d7;
+      }
+
+      a:hover,
+      a:focus {
+        color: #5180d7;
+        text-decoration: underline
+      }
+
+      a:active {
+        color: #4973c1;
+      }
+
+      header {
+        #background-color: #FFFFFF;
+        background-color: #ffffff;
+        border-top: 5px #373373 solid;
+        padding: 1px 1px 5px -5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      header .logo {
+        display: block;
+        height: 45px;
+        width: 90px;
+      }
+
+      header nav {
+        margin-top: 4px;
+      }
+
+      header nav a,
+      header nav a:visited {
+        color: #373373;
+      }
+
+      header nav a:hover,
+      header nav a:focus,
+      header nav a:active, {
+        color: #373373;
+        text-decoration: underline;
+      }
+
+      #headtitle {
+        font-size: 42px;
+      }
+
+      input[type="text"] {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 2px;
+        border: 1px solid #d5dbdd;
+        box-sizing: border-box;
+        color: #404648;
+        display: block;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 12px;
+        outline-width: 0;
+        outline: none;
+        padding: 10px 15px;
+        width: 100%;
+      }
+
+      input[type="text"]:focus {
+        border: 1px solid #5a8fef;
+        box-shadow: 0 0 5px #5a8fef;
+      }
+
+      section {
+        padding: 0 20px 20px 20px;
+      }
+
+      section.corporate {
+        margin-top: -20px;
+      }
+
+      section h2 {
+        background-color: #f1f2f2;
+        border-radius: 3px;
+        border: 1px #d5dbdd solid;
+        box-sizing: border-box;
+        color: #6a7072;
+        font-size: 15px;
+        line-height: 1.3em;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      section h2 a:visited {
+        color: #5a8fef;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      section ul {
+        list-style-type: none;
+      }
+
+      section > ul {
+        border-radius: 3px;
+        #background-color: #ffffff;
+        background-color: rgba(255,255,255,0.75);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        padding: 20px;
+      }
+
+      section > ul.placeholder {
+        display: none;
+      }
+
+      section > ul.production {
+        background-color: #fffcfc;
+        background-color: rgba(255,255,255,0.75);
+        border: 1px #fdc5c5 solid;
+        box-shadow: none;
+      }
+
+      section li {
+        color: #919799;
+        line-height: 1.3em;
+        margin-bottom: 0.4em;
+      }
+
+      section li:last-child {
+        margin-bottom: 0;
+      }
+
+      section li > ul {
+        margin-top: 0.4em;
+      }
+
+      section li > ul li::before {
+        color: #919799;
+        content: "—";
+        margin-right: 0.2em;
+      }
+
+      section li.heading {
+        color: #404648;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+
+      section > ul.production li.heading {
+        color: #f1454f;
+      }
+
+      @media (min-width: 560px) {
+        section {
+          align-items: stretch;
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 20px;
+        }
+
+        section.corporate {
+          margin-top: -40px;
+        }
+
+        section h2 {
+          margin: 0 10px 20px 10px;
+        }
+
+        section > ul {
+          box-sizing: border-box;
+          flex: 1;
+          flex-basis: auto;
+          margin-top: 0;
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 185px
+        }
+
+        section > ul.placeholder {
+          display: block;
+          height: 0;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        section > ul {
+          width: 230px
+        }
+      }
+
+      @media (min-width: 1240px) {
+        header > div,
+        section {
+          margin: 0 auto;
+        }
+
+        header > div {
+          max-width: 1180px;
+        }
+
+        section {
+          max-width: 1240px;
+        }
+      }
+    </style>

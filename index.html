@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+
+    <title>ACME dev links</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <script type="text/javascript">
+      function getEnv() {
+        return document.forms["form"].elements['env'].value;
+      }
+      function updateLinks() {
+        const env = getEnv();
+        const elements = document.getElementsByClassName("cloud");
+        const elementsLength = elements.length;
+        for (let i = 0; i < elementsLength; i ++){
+          const envNamePosition = elements[i].getAttribute('data-env-position');
+          const oldLink = elements[i].href;
+          const splitLink = oldLink.split('.');
+          splitLink[envNamePosition] = env;
+          elements[i].href = splitLink.join('.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <div>
+        <ul>
+          <li><a target=_blank href="https://evervee.me"><img src="star.png"/><span id="headtitle">BESTEST HOMEPAGE EVAH</span><img src="star.png"/></a></li>
+          <li>(<a target=_blank href="https://github.com/OMGVee/OMGVee.github.io/edit/main/index.html">edit on github</a>)</li>
+        </ul>
+      </div>
+    </header>
+ 
+    <section class="development">
+      <ul class="production">
+        <li class="heading">Home Links (DNS)</li>
+        <li><a target=_blank href="http://pi.eth:3000">Grafana</a></li>
+        <li><a target=_blank href="http://pi.eth:9090">Prometheus</a></li>
+        <li><a target=_blank href="http://pi.eth:8080/admin/">PiHole</a></li>
+        <li><a target=_blank href="http://pi.eth/">Pi Nginx</a></li>
+        <li><a target=_blank href="http://beagle/">BeagleboneBlack</a></li>
+      </ul>
+
+
+
+      <ul class="production">
+        <li class="heading">Home Links (IP)</li>
+        <li><a target=_blank href="http://192.168.0.200:3000">Grafana</a></li>
+        <li><a target=_blank href="http://192.168.0.200:9090">Prometheus</a></li>
+        <li><a target=_blank href="http://192.168.0.200:8080/admin/">PiHole</a></li>
+        <li><a target=_blank href="http://192.168.0.200/">Pi Nginx</a></li>
+        <li><a target=_blank href="http://192.168.1.200/">BeagleboneBlack</a></li>
+        
+      </ul>
+
+      <ul>
+        <li class="heading">Networks (DNS)</li>
+        <li><a target=_blank href="http://skynet/">Router: LivingRoom</a></li>
+        <li><a target=_blank href="http://mancave.fbi/">Router: ManCave (local)</a></li>
+        <li><a target=_blank href="http://mancave.sky/">Router: ManCave(external)</a></li>
+      </ul>
+
+      <ul>
+        <li class="heading">Networks (IP)</li>
+        <li><a target=_blank href="http://192.168.0.1/">Router: LivingRoom</a></li>
+        <li><a target=_blank href="http://192.168.1.1/">Router: ManCave (local)</a></li>
+        <li><a target=_blank href="http://192.168.0.100/">Router: ManCave(external)</a></li>
+      </ul>
+
+      <ul class="placeholder"></ul>
+      <ul class="placeholder"></ul>
+
+
+      <ul>
+        <li class="heading">NAS Services (DNS)</li>
+        <li><a target=_blank href="http://nas.sky:8080/">NAS WEB UI</a></li>
+        <li><a target=_blank href="http://nas.sky:9091/">Transmission (legit torrents only)</a></li>
+        <li><a target=_blank href="http://nas.sky:8080/hg2/">HappyGet2 (legit downloads only)</a></li>
+        <li><a target=_blank href="http://nas.sky/mediawiki/index.php/Main_Page">MediaWiki</a></li>
+        <li><a target=_blank href="http://nas.sky/owncloud/">OwnCloud</a></li>
+        <li><a target=_blank href="http://nas.sky/sqlbuddy/">SqlBuddy (phpMyAdmin)</a></li>
+        <li><a target=_blank href="http://nas.sky:8080/cgi-bin/surveillance/main.html">Surv Station (video)</a></li>
+        
+      </ul>
+      <ul>
+        <li class="heading">NAS Services (IP)</li>
+        <li><a target=_blank href="http://192.168.0.111:8080/">NAS WEB UI</a></li>
+        <li><a target=_blank href="http://192.168.0.111:9091/">Transmission (legit torrents only)</a></li>
+        <li><a target=_blank href="http://192.168.0.111:8080/hg2/">HappyGet2 (legit downloads only)</a></li>
+        <li><a target=_blank href="http://192.168.0.111/mediawiki/index.php/Main_Page">MediaWiki</a></li>
+        <li><a target=_blank href="http://192.168.0.111/owncloud/">OwnCloud</a></li>
+        <li><a target=_blank href="http://192.168.0.111/sqlbuddy">SqlBuddy (phpMyAdmin)</a></li>
+        <li><a target=_blank href="http://192.168.0.111:8080/cgi-bin/surveillance/main.html">Surv Station (video)</a></li>
+        
+      </ul>
+      <ul class="placeholder"></ul>
+      <ul class="placeholder"></ul>
+      <ul class="placeholder"></ul>
+ 
+  </section>
+
+    <script type="text/javascript">
+      document.forms["form"].elements['env'].value = 'my';
+      updateLinks();
+    </script>
+  </body>
+</html>
