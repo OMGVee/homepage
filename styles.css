@@ -26,14 +26,13 @@
       }
 
       a {
-        color: #5a8fef;
+        color: #1a00d0;
         text-decoration: none;
         transition: color 200ms linear;
       }
 
       a:visited {
-        #color: #6a7072;
-        color: #5180d7;
+        color: #1a00d0;
       }
 
       a:hover,
